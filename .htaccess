@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^content/ - [L]
+    RewriteRule ^assets/ - [L]
+
+    RewriteRule ^page/([0-9]*)$       index.php?start=$1                  [L]
+    RewriteRule ^category/([^/]*)$    index.php?page/category&name=$1     [L]
+    RewriteRule ^category/([^/]*)$    index.php?page/category&name=$1     [L]
+    RewriteRule ^categories$          index.php?page/category             [L]
+    RewriteRule ^category$            index.php?page/category             [L]
+    RewriteRule ^([a-zA-Z0-9-_/~]+)?$ index.php?page=$1                   [NC,L]
+</IfModule>

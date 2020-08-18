@@ -1,0 +1,1 @@
+<p class="lead">Hey there! Sorry, but we haven't created any categories (yet) - be sure to check back!</p>
